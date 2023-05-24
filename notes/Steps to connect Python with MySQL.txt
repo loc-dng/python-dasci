@@ -1,0 +1,19 @@
+Steps to connect Python with MySQL:
+
+1. Run MySQL Server with docker / docker-compose
+	- Navigate to file docker-compose.yaml
+	- then run in Terminal: docker-compose up
+
+2. Open MySQLWorkbench and create a connection (Database) to DB-Server
+	- In this database, there would be several schemas
+
+3. open python file:
+	conn = mysql.connector.connect(
+	    host="127.0.0.1",
+	    port="3306",
+	    database="Learn_SQL_Python", # name of schema in db, not name of MYSQL_DATABASE
+	    user='root',
+	    password="password"
+	)	
+
+--> TO kill the docker container: docker kill [container-name] (container-name could be defined in docker-compose.yaml) 
